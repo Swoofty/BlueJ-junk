@@ -8,6 +8,7 @@ public class Xs
      String numberOfx = "x";
      System.out.println(numberOfx.repeat(y));
    }
+   System.out.println(numberOfx.repeat(y));
  }
 
  public static void main(String[] args) { 
