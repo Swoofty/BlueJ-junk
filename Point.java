@@ -8,6 +8,14 @@ public class Point
      y = test2;
   }
   
+  public int getX(){
+     return x;
+  }
+  
+  public int getY(){
+     return y;
+  }
+  
   public int quadrant(){
      if (x > 0 && y > 0) return 1;
      if (x < 0 && y > 0) return 2;
@@ -23,13 +31,4 @@ public class Point
      x *= -1;
      y *= -1;
   }
-  
-  public Line(Point p1, Point p2)
-  public Point getP1(){
-      return p1;
-  }
-  public Point getP2(){
-      return p2;
-  }
-  public String to
 }
