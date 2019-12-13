@@ -1,4 +1,4 @@
-public class Rectangle
+;public class Rectangle
 {
     private int rectWidth;
     private int rectHeight;
@@ -34,6 +34,36 @@ public class Rectangle
     }
     
     public boolean contains(int x, int y){
-        while(rectX ) 
+        boolean xCoordCheck = false;
+        boolean yCoordCheck = false;
+        if (x > rectX && rectX + rectWidth > x) xCoordCheck = true;
+        if (y < rectY && rectY - rectHeight < y) yCoordCheck = true;
+        if(xCoordCheck && yCoordCheck) return true;
+        else return false;
+    }
+    
+    public boolean contains(Point p){
+        boolean xCoordCheck = false;
+        boolean yCoordCheck = false;
+        if (p.getX() > rectX && rectX + rectWidth > p.getX()) xCoordCheck = true;
+        if (p.getY() < rectY && rectY - rectHeight < p.getY()) yCoordCheck = true;
+        if(xCoordCheck && yCoordCheck) return true;
+        else return false;
+    }
+    
+    public Rectangle union(Rectangle rect){
+        int newRectWidth = (rect.getWidth() + rectWidth);
+        int newRectHeight = (rect.getHeight() + rectHeight);
+        int newRectx;
+        int newRecty;
+        if(rect.getX() < rectX){
+            newRectx = rect.getX();
+        }
+        else newRectx = rectX;
+        if(rect.getY() < rectY){
+            newRecty = rect.getY();
+        }
+        else newRecty = rectY;
+        return new Rectangle(newRectx, newRecty, newRectWidth, newRectHeight);
     }
 }
