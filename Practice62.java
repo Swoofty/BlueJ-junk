@@ -28,10 +28,6 @@ public class Practice62
         }
         return true;
     }
-    public static int reoccurringElement(int[] testArray){
-        
-    }
-    
     public static void main(String[] args){
         int[] arrayTest1 = {4, 4, 8, 12, 3, 4, 8};
         System.out.println(lastIndexOf(arrayTest1, 3));
